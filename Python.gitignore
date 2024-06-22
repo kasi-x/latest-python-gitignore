@@ -1,8 +1,7 @@
-### Case by case {{{
-## Extra Tools {{{
+### Case by Project {{{
 
 # Package version lock
-## This may be necessary (commented out) to ensure reproducibility.
+## This may be necessary (to be commented out) to ensure reproducibility.
 Pipfile.lock
 poetry.lock
 pdm.lock
@@ -10,16 +9,37 @@ pixi.lock
 requirements.lock
 requirements-dev.lock
 
+# Large data & models
+*.h5
+*.tar
+*.tar.gz
+*.db
+
+# Local Exceperiments 
+## Share youre reposts
+data/*/*
+notebooks/*
+
+# user LSP config file
+pyrightconfig.json
+
 # Poetry local configuration file 
 ## https://python-poetry.org/docs/configuration/#local-configuration
 poetry.toml
 
-# LSP config files
-## Sharing LSP configurations is not common practice.
-pyrightconfig.json
+# Logs
+logs/
+*.log
 
-## Extra Tools }}}
-### Case by case }}}
+# Secrets
+credentials.*
+*.srl
+*.csr
+*.key
+*.pem
+private.*
+
+### Case by Project }}}
 
 ###  Standards {{{
 ## Commons {{{
@@ -158,9 +178,10 @@ docs/_build/
 # Jupyter Notebook
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
+node_modules/
+package-lock.json
 
 # Django stuff:
-*.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
@@ -174,6 +195,17 @@ secrets.toml
 
 # Scrapy stuff:
 .scrapy
+
+# Airflow stuff
+airflow.db
+airflow.cfg
+unittests.cfg
+webserver_config.py
+
+# Hydra logs dir
+## facebookresearch/hydra
+## This name could be used in other contexts.
+# outputs/
 
 # Celery stuff
 celerybeat-schedule
@@ -201,4 +233,5 @@ nimblecache/
 boot_out.txt
 
 ## Extra Tools }}}
+
 ### Standards }}}
