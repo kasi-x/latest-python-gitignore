@@ -1,3 +1,29 @@
+### Case by case {{{
+## Extra Tools {{{
+
+# Package version lock
+## This may be necessary (commented out) to ensure reproducibility.
+Pipfile.lock
+poetry.lock
+pdm.lock
+pixi.lock
+requirements.lock
+requirements-dev.lock
+
+# Poetry local configuration file 
+## https://python-poetry.org/docs/configuration/#local-configuration
+poetry.toml
+
+# LSP config files
+## Sharing LSP configurations is not common practice.
+pyrightconfig.json
+
+## Extra Tools }}}
+### Case by case }}}
+
+###  Standards {{{
+## Commons {{{
+
 # Byte-compiled / optimized / DLL files
 **/__pycache__/
 *.py[codz]
@@ -26,13 +52,18 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# PyInstaller
-*.manifest
-*.spec
+## Commons }}}
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
+## Vanilla {{{
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
 
 # Unit test / coverage reports
 htmlcov/
@@ -48,49 +79,24 @@ coverage.xml
 .pytest_cache/
 cover/
 
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Streamlit
-secrets.toml
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-.pybuilder/
-target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
+# IPython
+profile_default/
+ipython_config.py
 
 # IPython
 profile_default/
 ipython_config.py
 
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+## Vanilla }}}
+
+## Extras {{{
+
 # pyenv
 .python-version
-
-# package version-lock
-## Sometime these shouldn't be ignored.
-Pipfile.lock
-poetry.lock
-pdm.lock
-pixi.lock
 
 # package venv
 .pdm.toml
@@ -101,31 +107,15 @@ pixi.lock
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
 __pypackages__/
 
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
+# direnv
+.direnv
+.envrc
 
-# SageMath parsed files
-*.sage.py
-
-# Environments
+# dotenv
 .env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Spyder project settings
-.spyderproject
-.spyproject
 
 # Rope project settings
 .ropeproject
-
-# mkdocs documentation
-/site
 
 # mypy
 .mypy_cache/
@@ -146,3 +136,69 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# PyInstaller
+*.manifest
+*.spec
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Sphinx documentation
+docs/_build/
+
+# mkdocs documentation
+/site
+
+# Translations
+*.mo
+*.pot
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Streamlit
+secrets.toml
+
+# Scrapy stuff:
+.scrapy
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Memray result file
+memray-.*.bin
+memray-.*.html.
+
+# nimpy, nimporter
+nimcache/
+nimblecache/
+
+# Circuit
+.Trashes
+.metadata_never_index
+.fseventsd/
+boot_out.txt
+
+## Extra Tools }}}
+### Standards }}}
