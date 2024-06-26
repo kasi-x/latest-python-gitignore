@@ -10,21 +10,34 @@ requirements.lock
 requirements-dev.lock
 
 # Large data & models
+*.accdb
+*.db
+*.db-shm
+*.db-wal
+*.dbf
 *.h5
+*.mdb
+*.parquet
+*.pdb
+*.rds
+*.sqlite3
 *.tar
 *.tar.gz
-*.db
 
-# Local Exceperiments 
-## Share youre reposts
+# Exceperiments 
 data/*/*
+## otherwise
+# data/processed/*
+# data/final/*
+# data/raw/*
+models/*
+## result is reposts, not notes.
 notebooks/*
 
 # user LSP config file
 pyrightconfig.json
 
 # Poetry local configuration file 
-## https://python-poetry.org/docs/configuration/#local-configuration
 poetry.toml
 
 # Logs
@@ -113,7 +126,7 @@ pip-delete-this-directory.txt
 
 ## Vanilla }}}
 
-## Extras {{{
+## Extra {{{
 
 # pyenv
 .python-version
@@ -147,6 +160,8 @@ dmypy.json
 
 # Ruff
 .ruff_cache/
+# ruff.toml
+# .ruff.toml
 
 # pytype static type analyzer
 .pytype/
@@ -204,7 +219,7 @@ webserver_config.py
 
 # Hydra logs dir
 ## facebookresearch/hydra
-## This name could be used in other contexts.
+## This name could be used in other context.
 # outputs/
 
 # Celery stuff
@@ -220,7 +235,7 @@ celerybeat.pid
 
 # Memray result file
 memray-.*.bin
-memray-.*.html.
+memray-.*.html
 
 # nimpy, nimporter
 nimcache/
@@ -232,6 +247,6 @@ nimblecache/
 .fseventsd/
 boot_out.txt
 
-## Extra Tools }}}
+## Extra }}}
 
 ### Standards }}}
